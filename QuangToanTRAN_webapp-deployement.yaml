@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tqt-webapp-deployment
+  labels:
+    app: tqt-webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tqt-webapp
+  template:
+    metadata:
+      labels:
+        app: tqt-webapp
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: tqt-webapp
+        image: cloud.canister.io:5000/arhturescriou/node-redis
+        ports:
+        - containerPort: 3000
+        env:
+        - name: PORT
+          value: "6379"
+        - name: REDIS_URL
+          value: "redis://10.3.54.238"

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tqt-redis-deployment
+  labels:
+    app: tqt-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tqt-redis
+  template:
+    metadata:
+      labels:
+        app: tqt-redis
+    spec:
+      containers:
+      - name: tqt-redisdb
+        image: redis:latest
+        ports:
+        - containerPort: 6379
+        
