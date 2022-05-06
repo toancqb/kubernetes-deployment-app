@@ -21,3 +21,7 @@ kubectl create -f QuangToanTRAN_webapp-deployement.yaml
 kubectl create -f QuangToanTRAN_webapp-service.yaml
 ```
 
+### Demo
+![alt text](https://github.com/toancqb/kubernetes-deployment-app/blob/master/images/Screenshot_from_2022-05-06_15-22-00.png?raw=true)
+
+![alt text](https://github.com/toancqb/kubernetes-deployment-app/blob/master/images/Screenshot_from_2022-05-06_15-22-27.png?raw=true)
