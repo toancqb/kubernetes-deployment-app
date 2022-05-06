@@ -17,6 +17,7 @@ spec:
       containers:
       - name: tqt-redisdb
         image: redis:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 6379
         

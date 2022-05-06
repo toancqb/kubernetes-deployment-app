@@ -19,6 +19,7 @@ spec:
       containers:
       - name: tqt-webapp
         image: cloud.canister.io:5000/arhturescriou/node-redis
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
         env:
